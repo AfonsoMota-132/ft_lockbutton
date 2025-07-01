@@ -26,16 +26,18 @@ if [ -d "$HOME/.local/share/gnome-shell/" ]; then
 	  echo "Extension recognized, enabling..."
 	  gnome-extensions enable "lockscreen@43network.org"
 	else
-	  echo "Extension not yet recognized by GNOME Shell."
-	  echo "Please do Alt + F2, its gonna pop a menu, then write r and press enter"
-	  echo "Your GUI might freak out a bit, thats ok, its GNOME Shell restarting!"
-	  echo "If after restarting the button still doesn't appear"
-	  echo -n "run this bash -c" 
-	  echo '$(curl -fsSL https://raw.githubusercontent.com/AfonsoMota-132/ft_lockbutton/main/run.sh)'
-	  echo "cmd again"
-	  echo "If you prefer or if anything goes wrong"
-	  echo "you can contact afogonca for more help"
-	  exit 1
+		echo -n "\033[31m"
+		echo "Extension not yet recognized by GNOME Shell."
+		echo "Please do Alt + F2, its gonna pop a menu, then write r and press enter"
+		echo "Your GUI might freak out a bit, thats ok, its GNOME Shell restarting!"
+		echo "If after restarting the button still doesn't appear"
+		echo -n "run this bash -c" 
+		echo '$(curl -fsSL https://raw.githubusercontent.com/AfonsoMota-132/ft_lockbutton/main/run.sh)'
+		echo "cmd again"
+		echo "If you prefer or if anything goes wrong"
+		echo "you can contact afogonca for more help"
+		echo -n "\033[0m"
+		exit 1
 	fi
 	gnome-extensions enable "lockscreen@43network.org"
 	echo "Instalation seemed successfull!"
