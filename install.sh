@@ -9,6 +9,7 @@ if [ -d "$HOME/.local/share/gnome-shell/" ]; then
 		if gnome-extensions list | grep -q "lockscreen@43network.org"; then
 			echo "Extension recognized, enabling..."
 			gnome-extensions enable "lockscreen@43network.org"
+			exit 1
 		else
 		echo "Error!"
 		echo "This directory $HOME/.local/share/gnome-shell/extensions/lockscreen@43network.org"
@@ -29,6 +30,7 @@ if [ -d "$HOME/.local/share/gnome-shell/" ]; then
 	  echo "Please do Alt + F2, its gonna pop a menu, then write r and press enter"
 	  echo "Your GUI might freak out a bit, thats ok, its GNOME Shell restarting!"
 	  echo "If after restarting the button still doesn't appear rerun the install.sh"
+	  echo "in the downloads/ft_lockbutton folder"
 	  echo "If you prefer or if anything goes wrong"
 	  echo "you can contact me and i can go and help"
 	  exit 1
