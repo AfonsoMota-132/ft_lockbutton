@@ -1,2 +1,6 @@
-git clone https://github.com/AfonsoMota-132/ft_lockbutton.git "$HOME/Downloads/ft_lockbutton"
-bash "$HOME/Downloads/ft_lockbutton/install.sh"
+
+git clone https://github.com/AfonsoMota-132/ft_lockbutton.git
+cd ft_lockbutton
+echo $PWD
+bash "./ft_lockbutton/install.sh"
+
