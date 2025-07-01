@@ -20,7 +20,6 @@ if [ -d "$HOME/.local/share/gnome-shell/" ]; then
 		exit 1
 		fi
 	fi
-	echo $PWD
 	cp extension.js $HOME/.local/share/gnome-shell/extensions/lockscreen@43network.org
 	cp metadata.json $HOME/.local/share/gnome-shell/extensions/lockscreen@43network.org
 	if gnome-extensions list | grep -q "lockscreen@43network.org"; then
